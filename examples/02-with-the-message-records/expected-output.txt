@@ -1,0 +1,2 @@
+True MSG-001
+Xml.FacetViolation GrpHdr/MsgId

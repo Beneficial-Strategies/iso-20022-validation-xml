@@ -1,10 +1,10 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-namespace BeneficialStrategies.Iso20022.Validation;
+namespace BeneficialStrategies.Iso20022.Validation.Xml.Tests;
 
 public class XmlValidationExtensionsTests
 {
-    private readonly IValidator<IMultilateralSettlementRequestV02> _sut = new MultilateralSettlementRequestV02Validator();
+    private readonly IValidator<IMultilateralSettlementRequestV02> _sut = new SettlementRequestRules();
 
     private static MultilateralSettlementRequestV02 ValidMessage() =>
         new()
@@ -141,7 +141,7 @@ public class XmlValidationExtensionsTests
         var ns = document.Root!.Name.Namespace;
         var header = document.Descendants(ns + "GrpHdr").Single();
         header.Element(ns + "MsgId")!.Remove();
-        IValidator<IGroupHeader104> groupHeader = new GroupHeader104Validator();
+        IValidator<IGroupHeader104> groupHeader = new GroupHeaderRules();
 
         var result = groupHeader.Validate(header, out GroupHeader104? read, new ReadContext(ns, "Document/MltlatSttlmReq/"));
 

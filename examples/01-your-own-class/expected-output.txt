@@ -1,0 +1,5 @@
+Acme Corp pays Shared
+Xml.FacetViolation Party/Name: 'Max35Text' allows at most 35 character(s) but received 61: 'A name that is a good deal longer than thirty-f...'.
+Xml.BadValue Party/ChargeBearer: 'FREE' is not a value of ChargeBearerType1Code. Expected one of: DEBT, CRED, SHAR, SLEV.
+True
+Xml.RequiredMissing Party/ChargeBearer: Required element <ChargeBearer> is missing.

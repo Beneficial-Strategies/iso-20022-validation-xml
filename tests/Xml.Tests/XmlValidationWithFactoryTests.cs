@@ -1,12 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-namespace BeneficialStrategies.Iso20022.Validation;
+namespace BeneficialStrategies.Iso20022.Validation.Xml.Tests;
 
 /// <summary>The same extensions, reading into the interface with the objects of a factory: no record is named.</summary>
 public class XmlValidationWithFactoryTests
 {
     private static readonly Factory.IsoDataFactory Factory = new();
-    private readonly IValidator<IMultilateralSettlementRequestV02> _sut = new MultilateralSettlementRequestV02Validator();
+    private readonly IValidator<IMultilateralSettlementRequestV02> _sut = new SettlementRequestRules();
 
     private static MultilateralSettlementRequestV02 ValidMessage() =>
         new()
