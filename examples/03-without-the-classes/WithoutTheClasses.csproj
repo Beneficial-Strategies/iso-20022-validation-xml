@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <!-- Objects made at run time for an interface, so no class is needed at all. -->
+    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
+  </ItemGroup>
+</Project>
