@@ -44,6 +44,17 @@ jobs:
         env:
           PYTHONPATH: ../package
 
-  # A package that targets netstandard2.0 (for .NET Framework 4.6.1 and later, Mono, Unity) also needs a job that runs its tests on
-  # .NET Framework 4.8, which needs Windows: runs-on: windows-latest, and `dotnet test tests/<Tests project> -c Release -f net48`.
-  # The tests project adds net48 to its target frameworks on Windows (see the package this repository was made from, if it has one).
+  # The netstandard2.0 build of the package is for .NET Framework (4.6.1 and later), Mono and Unity. Its tests run on .NET Framework 4.8,
+  # which needs Windows. The tests project adds net48 to its target frameworks on Windows.
+  netstandard-net48:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      # The netstandard2.0 build, with messages of the tests' own (no records: they are net8.0 and net10.0 only).
+      - name: Test the XML validation on .NET Framework 4.8
+        run: dotnet test tests/Xml.NetStandard.Tests -c Release -f net48
