@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <!-- Objects made at run time for an interface, to read into it. -->
-    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0, 1.1.0)" />
     <ProjectReference Include="..\..\src\Xml\BeneficialStrategies.Iso20022.Validation.Xml.csproj" />
   </ItemGroup>
 
