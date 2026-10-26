@@ -8,14 +8,6 @@ Validate ISO 20022 XML straight from text, a document or an element: every probl
 
 The package is built so that you take only what you need. It needs [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the ISO primitive types, the code sets and the XML reader) and [FluentValidation](https://docs.fluentvalidation.net/), nothing else: not the message definitions, not the records. Three examples follow, each adding one thing.
 
-## Install
-
-```
-dotnet add package BeneficialStrategies.Iso20022.Validation.Xml --prerelease
-```
-
-The package is in alpha, so the command asks for a prerelease version.
-
 ## How to use
 
 ### Your own class
@@ -164,7 +156,7 @@ Try the [project](https://github.com/Beneficial-Strategies/iso-20022-validation-
 ## More
 
 * Documentation, release notes and issues: https://github.com/Beneficial-Strategies/iso-20022-validation-xml
-* License: MIT. Status: alpha.
+* License: MIT. Status: stable.
 
 ### Every call has an async form and takes a document, an element or text
 
